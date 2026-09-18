@@ -64,10 +64,10 @@ export function Navbar() {
       <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6 md:pt-4">
         <div
           className={cn(
-            "glass-nav mx-auto flex max-w-[1240px] items-center justify-between gap-3 rounded-[1.75rem] px-3 py-2 ring-1 transition-[background-color,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] md:px-4",
+            "glass-nav mx-auto flex w-full max-w-[1240px] items-center justify-between gap-2 rounded-[1.75rem] px-2 py-2 ring-1 transition-[background-color,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] sm:px-3 md:px-4",
             scrolled
-              ? "bg-white/78 shadow-float ring-ink/8 backdrop-blur-xl"
-              : "bg-white/55 shadow-soft ring-white/60 backdrop-blur-md",
+              ? "bg-white/90 shadow-float ring-ink/8 sm:bg-white/78 sm:backdrop-blur-xl"
+              : "bg-white/90 shadow-soft ring-ink/8 sm:bg-white/55 sm:ring-white/60 sm:backdrop-blur-md",
           )}
         >
           <Logo />

@@ -63,11 +63,11 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <Phone className="size-4 shrink-0" strokeWidth={1.5} />
-              <a href="tel:+2342013304410">+234 20 1330 4410</a>
+              <a href="tel:+2342013304410">+234 814 1153 727</a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="size-4 shrink-0" strokeWidth={1.5} />
-              <a href="mailto:hello@brasa.kitchen">hello@brasa.kitchen</a>
+              <a href="mailto:ekunolajohn@gmail.com">ekunolajohn@gmail.com</a>
             </li>
           </ul>
         </div>

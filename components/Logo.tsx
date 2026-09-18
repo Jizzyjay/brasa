@@ -24,7 +24,7 @@ export function Logo({ className, onDark = false }: LogoProps) {
       </span>
       <span
         className={cn(
-          "font-display text-xl font-semibold tracking-tight",
+          "font-display text-lg font-semibold tracking-tight sm:text-xl",
           onDark ? "text-white" : "text-ink",
         )}
       >

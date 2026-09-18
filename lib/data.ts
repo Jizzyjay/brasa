@@ -62,7 +62,7 @@ export const categories: Category[] = [
     id: "drinks",
     name: "Drinks",
     image:
-      "https://images.unsplash.com/photo-1544145945-f9049c60ef4f?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=600&q=80",
     alt: "Chilled citrus drink",
   },
 ];
@@ -155,7 +155,7 @@ export const dishes: Dish[] = [
     price: 2100,
     rating: 4.8,
     image:
-      "https://images.unsplash.com/photo-1544145945-f9049c60ef4f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=900&q=80",
     alt: "Hibiscus cooler in a tall glass",
     categoryId: "drinks",
   },

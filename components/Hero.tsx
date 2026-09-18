@@ -11,14 +11,14 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24"
+      className="relative min-h-[min(100dvh,52rem)] px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24"
     >
-      <div className="mx-auto grid min-h-[calc(100dvh-7rem)] max-w-[1240px] items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-8">
+      <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-8">
         <div className="max-w-xl">
           <p className="hero-rise text-sm font-medium text-olive">
             Lagos kitchen, city-wide delivery
           </p>
-          <h1 className="hero-rise hero-rise-1 mt-4 font-display text-[clamp(2.5rem,10vw,5.5rem)] leading-[1.05] font-semibold tracking-[-0.04em] text-ink">
+          <h1 className="hero-rise hero-rise-1 mt-4 font-display text-[clamp(2.15rem,8vw,5.5rem)] leading-[1.05] font-semibold tracking-[-0.03em] text-ink sm:tracking-[-0.04em]">
             Good Food.
             <br />
             Delivered Fresh.
@@ -38,8 +38,10 @@ export function Hero() {
         </div>
 
         <div className="hero-rise hero-rise-1 relative mx-auto w-full max-w-[540px]">
-          <div className="absolute top-8 -left-6 size-[78%] rounded-full bg-olive/12 blur-2xl" />
-          <div className="absolute right-0 bottom-4 size-[55%] rounded-full bg-chili/10 blur-2xl" />
+          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+            <div className="absolute top-8 -left-6 size-[78%] rounded-full bg-olive/12 blur-2xl" />
+            <div className="absolute right-0 bottom-4 size-[55%] rounded-full bg-chili/10 blur-2xl" />
+          </div>
 
           <div className="relative mx-auto aspect-square max-w-[460px]">
             <div className="absolute inset-[8%] overflow-hidden rounded-full bg-mist shadow-lift ring-8 ring-white">
@@ -61,7 +63,7 @@ export function Hero() {
               </div>
             </FloatCard>
 
-            <FloatCard className="top-[18%] right-0 sm:-right-2">
+            <FloatCard className="top-[18%] right-0 max-sm:hidden sm:-right-2">
               <Clock className="size-4 text-olive" strokeWidth={1.5} />
               <div>
                 <p className="text-sm font-semibold leading-none">{heroStats.delivery}</p>
