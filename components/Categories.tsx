@@ -31,7 +31,7 @@ export function Categories() {
                 key={category.id}
                 href="#menu"
                 onClick={() => setCategoryId(category.id)}
-                className="group w-[7.5rem] shrink-0 snap-start lg:w-auto"
+                className="group w-[7.5rem] shrink-0 cursor-pointer snap-start lg:w-auto"
               >
                 <div
                   className={`rounded-[1.5rem] p-1.5 ring-1 transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:-translate-y-0.5 group-hover:shadow-float group-active:scale-[0.98] ${

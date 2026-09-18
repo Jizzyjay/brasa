@@ -1,37 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Brasa
 
-## Getting Started
+A premium food-delivery landing page for a fictional Lagos kitchen. Built as a frontend portfolio piece with Next.js App Router, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+The brand, copy, and layout are original. The page takes visual cues from a food-delivery composition (hero photography, floating stats, category row, dish grid) without copying a live product.
+
+## Features
+
+- Sticky floating navbar with search, bag, and a full-screen mobile menu
+- Hero with primary/secondary CTAs and floating rating, delivery, and dish cards
+- Filterable menu with naira pricing and add-to-bag
+- Cart sheet with quantity controls
+- Promo, how-it-works, about, reviews, closing CTA, and footer newsletter
+- Motion (Framer Motion) springs, press feedback, and reduced-motion support
+
+## Tech stack
+
+- [Next.js](https://nextjs.org) 16 (App Router) and React 19
+- TypeScript
+- Tailwind CSS v4
+- [Motion](https://motion.dev) (`motion/react`)
+- [Lucide React](https://lucide.dev) icons
+- Unsplash photography via `next/image`
+
+## Getting started
+
+Requires Node.js 20 or later.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). If that port is already in use, Next.js will pick the next one (often `3001`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the local dev server |
+| `npm run build` | Create a production build |
+| `npm start` | Serve the production build |
+| `npm run lint` | Run ESLint |
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+app/
+  page.tsx          # Landing page composition
+  layout.tsx        # Fonts, metadata, providers
+  globals.css       # Design tokens and base styles
+  icon.svg          # Brasa favicon
+components/         # Page sections and shared UI
+lib/
+  data.ts           # Dishes, categories, testimonials
+  types.ts
+  motion.ts         # Spring presets
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Menu items, categories, and reviews live in `lib/data.ts`. Interactive pieces (nav, cart, search, add-to-bag) are client components; the page itself stays a Server Component.
 
-## Deploy on Vercel
+## Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Brasa is a demo brand, not a real restaurant. Orders, the newsletter, and social links do not process live payments or signups.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# brasa
+Food images load from `images.unsplash.com` (allowed in `next.config.ts`), so the first visit needs a network connection.

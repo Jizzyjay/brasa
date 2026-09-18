@@ -32,7 +32,7 @@ export function Footer() {
             <Social href="https://instagram.com" label="Instagram">
               <Camera className="size-4" strokeWidth={1.5} />
             </Social>
-            <Social href="https://facebook.com" label="Facebook">
+            <Social href="https://new-portfolio-ochre-eight.vercel.app/" label="Facebook">
               <Globe className="size-4" strokeWidth={1.5} />
             </Social>
             <Social href="https://youtube.com" label="YouTube">
@@ -96,7 +96,7 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="rounded-full bg-chili px-4 py-2 text-sm font-medium text-white transition-transform active:scale-95 hover:bg-chili-dark"
+                className="cursor-pointer rounded-full bg-chili px-4 py-2 text-sm font-medium text-white transition-transform active:scale-95 hover:bg-chili-dark"
               >
                 Join
               </button>
@@ -140,7 +140,7 @@ function Social({
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
-      className="grid size-10 place-items-center rounded-full bg-white/8 ring-1 ring-white/10 hover:bg-white/14"
+      className="grid size-10 cursor-pointer place-items-center rounded-full bg-white/8 ring-1 ring-white/10 hover:bg-white/14"
     >
       {children}
     </a>

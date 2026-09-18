@@ -78,7 +78,7 @@ export function SearchDialog() {
               <button
                 type="button"
                 onClick={closeSearch}
-                className="grid size-8 place-items-center rounded-full hover:bg-white"
+                className="grid size-8 cursor-pointer place-items-center rounded-full hover:bg-white"
                 aria-label="Close search"
               >
                 <X className="size-4" strokeWidth={1.5} />

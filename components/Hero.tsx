@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Clock, Star, Users } from "lucide-react";
 import type { ReactNode } from "react";
 import { Button } from "@/components/Button";
-import { brand, heroStats } from "@/lib/data";
+import { heroStats } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -38,9 +38,9 @@ export function Hero() {
         </div>
 
         <div className="hero-rise hero-rise-1 relative mx-auto w-full max-w-[540px]">
-          <div className="pointer-events-none absolute inset-0 overflow-hidden">
-            <div className="absolute top-8 -left-6 size-[78%] rounded-full bg-olive/12 blur-2xl" />
-            <div className="absolute right-0 bottom-4 size-[55%] rounded-full bg-chili/10 blur-2xl" />
+          <div className="pointer-events-none absolute -inset-24 -z-10">
+            <div className="absolute top-8 left-0 size-[78%] rounded-full bg-olive/12 blur-2xl" />
+            <div className="absolute right-4 bottom-4 size-[55%] rounded-full bg-chili/10 blur-2xl" />
           </div>
 
           <div className="relative mx-auto aspect-square max-w-[460px]">

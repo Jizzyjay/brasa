@@ -11,7 +11,7 @@ export function Logo({ className, onDark = false }: LogoProps) {
   return (
     <a
       href="#home"
-      className={cn("inline-flex shrink-0 items-center gap-2", className)}
+      className={cn("inline-flex shrink-0 cursor-pointer items-center gap-2", className)}
       aria-label={`${brand.name} home`}
     >
       <span

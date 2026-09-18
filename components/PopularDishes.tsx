@@ -64,7 +64,7 @@ export function PopularDishes() {
             <p className="mt-2 text-muted">Browse another craving, or see the full menu.</p>
             <button
               type="button"
-              className="mt-5 text-sm font-medium text-chili"
+              className="mt-5 cursor-pointer text-sm font-medium text-chili"
               onClick={() => setCategoryId(null)}
             >
               Show all dishes
@@ -103,7 +103,7 @@ function FilterChip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full px-3.5 py-1.5 text-sm transition-colors duration-200 active:scale-95 ${
+      className={`cursor-pointer rounded-full px-3.5 py-1.5 text-sm transition-colors duration-200 active:scale-95 ${
         selected ? "bg-ink text-white" : "bg-white text-ink ring-1 ring-ink/10 hover:bg-mist"
       }`}
       aria-pressed={selected}

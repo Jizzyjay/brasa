@@ -98,7 +98,7 @@ export function CartSheet() {
                   ref={closeRef}
                   type="button"
                   onClick={closeCart}
-                  className="grid size-10 place-items-center rounded-full hover:bg-mist"
+                  className="grid size-10 cursor-pointer place-items-center rounded-full hover:bg-mist"
                   aria-label="Close bag"
                 >
                   <X className="size-5" strokeWidth={1.5} />
@@ -140,7 +140,7 @@ export function CartSheet() {
                           <div className="mt-2 flex items-center gap-2">
                             <button
                               type="button"
-                              className="grid size-7 place-items-center rounded-full bg-white ring-1 ring-ink/10 active:scale-95"
+                              className="grid size-7 cursor-pointer place-items-center rounded-full bg-white ring-1 ring-ink/10 active:scale-95"
                               onClick={() =>
                                 setQuantity(item.id, item.quantity - 1)
                               }
@@ -153,7 +153,7 @@ export function CartSheet() {
                             </span>
                             <button
                               type="button"
-                              className="grid size-7 place-items-center rounded-full bg-white ring-1 ring-ink/10 active:scale-95"
+                              className="grid size-7 cursor-pointer place-items-center rounded-full bg-white ring-1 ring-ink/10 active:scale-95"
                               onClick={() =>
                                 setQuantity(item.id, item.quantity + 1)
                               }
@@ -163,7 +163,7 @@ export function CartSheet() {
                             </button>
                             <button
                               type="button"
-                              className="ml-auto text-sm text-muted hover:text-chili"
+                              className="ml-auto cursor-pointer text-sm text-muted hover:text-chili"
                               onClick={() => removeItem(item.id)}
                             >
                               Remove

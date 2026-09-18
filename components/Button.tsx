@@ -35,7 +35,7 @@ export function Button({
   ariaLabel,
 }: ButtonProps) {
   const classes = cn(
-    "group inline-flex items-center justify-center gap-2 rounded-full font-medium whitespace-nowrap transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.97]",
+    "group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full font-medium whitespace-nowrap transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.97]",
     size === "lg" ? "h-12 px-5 text-base" : "h-11 px-4 text-sm",
     variants[variant],
     className,

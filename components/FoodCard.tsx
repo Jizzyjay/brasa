@@ -49,7 +49,7 @@ export function FoodCard({ dish }: FoodCardProps) {
           <button
             type="button"
             onClick={() => addItem(dish)}
-            className="inline-flex items-center gap-1.5 rounded-full bg-chili px-3.5 py-2 text-sm font-medium text-white transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-chili-dark active:scale-95"
+            className="inline-flex items-center gap-1.5 rounded-full bg-chili px-3.5 py-2 text-sm font-medium text-white transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-chili-dark active:scale-95 cursor-pointer"
             aria-label={`Add ${dish.name} to bag`}
           >
             <Plus className="size-4" strokeWidth={1.5} />

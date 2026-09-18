@@ -78,7 +78,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "rounded-full px-3.5 py-2 text-sm transition-colors duration-200",
+                className="cursor-pointer rounded-full px-3.5 py-2 text-sm transition-colors duration-200"
                   active === link.href
                     ? "bg-ink text-white"
                     : "text-ink/75 hover:bg-mist hover:text-ink",
@@ -97,7 +97,7 @@ export function Navbar() {
                 closeCart();
                 openSearch();
               }}
-              className="grid size-9 place-items-center rounded-full text-ink transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-mist active:scale-95 sm:size-10"
+              className="grid size-9 cursor-pointer place-items-center rounded-full text-ink transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-mist active:scale-95 sm:size-10"
               aria-label="Search the menu"
             >
               <Search className="size-5" strokeWidth={1.5} />
@@ -109,7 +109,7 @@ export function Navbar() {
                 closeMenu();
                 openCart();
               }}
-              className="relative grid size-9 place-items-center rounded-full text-ink transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-mist active:scale-95 sm:size-10"
+              className="relative grid size-9 cursor-pointer place-items-center rounded-full text-ink transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-mist active:scale-95 sm:size-10"
               aria-label={`Open bag, ${count} items`}
             >
               <ShoppingBag className="size-5" strokeWidth={1.5} />
@@ -128,7 +128,7 @@ export function Navbar() {
 
             <button
               type="button"
-              className="grid size-9 place-items-center rounded-full hover:bg-mist sm:size-10 lg:hidden"
+              className="grid size-9 cursor-pointer place-items-center rounded-full hover:bg-mist sm:size-10 lg:hidden"
               onClick={toggleMenu}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
@@ -187,9 +187,19 @@ export function Navbar() {
                 </motion.a>
               ))}
             </nav>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-3">
               <Button href="#menu" onClick={handleNavClick} size="lg" icon>
                 Order Now
+              </Button>
+              <Button
+                variant="secondary"
+                size="lg"
+                onClick={() => {
+                  closeMenu();
+                  openSearch();
+                }}
+              >
+                Search menu
               </Button>
             </div>
           </motion.div>
