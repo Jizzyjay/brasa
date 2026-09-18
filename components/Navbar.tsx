@@ -90,14 +90,14 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex shrink-0 items-center gap-0.5 sm:gap-1.5">
             <button
               type="button"
               onClick={() => {
                 closeCart();
                 openSearch();
               }}
-              className="grid size-10 place-items-center rounded-full text-ink transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-mist active:scale-95"
+              className="grid size-9 place-items-center rounded-full text-ink transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-mist active:scale-95 sm:size-10"
               aria-label="Search the menu"
             >
               <Search className="size-5" strokeWidth={1.5} />
@@ -109,7 +109,7 @@ export function Navbar() {
                 closeMenu();
                 openCart();
               }}
-              className="relative grid size-10 place-items-center rounded-full text-ink transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-mist active:scale-95"
+              className="relative grid size-9 place-items-center rounded-full text-ink transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-mist active:scale-95 sm:size-10"
               aria-label={`Open bag, ${count} items`}
             >
               <ShoppingBag className="size-5" strokeWidth={1.5} />
@@ -128,7 +128,7 @@ export function Navbar() {
 
             <button
               type="button"
-              className="grid size-10 place-items-center rounded-full hover:bg-mist lg:hidden"
+              className="grid size-9 place-items-center rounded-full hover:bg-mist sm:size-10 lg:hidden"
               onClick={toggleMenu}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"

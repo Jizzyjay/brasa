@@ -11,15 +11,17 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24"
+      className="relative px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24"
     >
       <div className="mx-auto grid min-h-[calc(100dvh-7rem)] max-w-[1240px] items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-8">
         <div className="max-w-xl">
           <p className="hero-rise text-sm font-medium text-olive">
             Lagos kitchen, city-wide delivery
           </p>
-          <h1 className="hero-rise hero-rise-1 mt-4 font-display text-[clamp(2.75rem,7vw,5.5rem)] leading-[1.05] font-semibold tracking-[-0.04em] text-ink">
-            {brand.tagline}
+          <h1 className="hero-rise hero-rise-1 mt-4 font-display text-[clamp(2.5rem,10vw,5.5rem)] leading-[1.05] font-semibold tracking-[-0.04em] text-ink">
+            Good Food.
+            <br />
+            Delivered Fresh.
           </h1>
           <p className="hero-rise hero-rise-2 mt-5 max-w-[38ch] text-lg leading-relaxed text-muted">
             Burgers off the grill, pasta finished to order, and rice with a proper
