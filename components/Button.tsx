@@ -36,7 +36,9 @@ export function Button({
 }: ButtonProps) {
   const classes = cn(
     "group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full font-medium whitespace-nowrap transition-transform duration-200 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.97]",
-    size === "lg" ? "h-12 px-5 text-base" : "h-11 px-4 text-sm",
+    size === "lg"
+      ? "h-11 px-4 text-sm sm:h-12 sm:px-5 sm:text-base"
+      : "h-10 px-3.5 text-sm sm:h-11 sm:px-4",
     variants[variant],
     className,
   );
@@ -47,7 +49,7 @@ export function Button({
       {icon ? (
         <span
           className={cn(
-            "grid size-7 place-items-center rounded-full transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-px",
+            "grid size-6 place-items-center rounded-full transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-px sm:size-7",
             variant === "primary" || variant === "dark"
               ? "bg-white/15"
               : "bg-ink/8",

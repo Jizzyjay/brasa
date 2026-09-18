@@ -29,7 +29,7 @@ export function PopularDishes() {
             <div>
               <h2
                 id="menu-heading"
-                className="font-display text-3xl font-semibold tracking-tight md:text-4xl"
+                className="font-display text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl"
               >
                 Tonight’s favorites
               </h2>
@@ -38,7 +38,7 @@ export function PopularDishes() {
                 built for a weeknight.
               </p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="-mx-4 mt-6 flex gap-2 overflow-x-auto px-4 pb-1 scrollbar-none sm:mx-0 sm:mt-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
               <FilterChip
                 label="All"
                 selected={categoryId === null}
@@ -103,7 +103,7 @@ function FilterChip({
     <button
       type="button"
       onClick={onClick}
-      className={`cursor-pointer rounded-full px-3.5 py-1.5 text-sm transition-colors duration-200 active:scale-95 ${
+      className={`cursor-pointer shrink-0 rounded-full px-3 py-1.5 text-sm transition-colors duration-200 active:scale-95 sm:px-3.5 ${
         selected ? "bg-ink text-white" : "bg-white text-ink ring-1 ring-ink/10 hover:bg-mist"
       }`}
       aria-pressed={selected}

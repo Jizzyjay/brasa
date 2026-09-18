@@ -17,7 +17,7 @@ export function SearchDialog() {
 
   const results = useMemo(() => {
     const value = query.trim().toLowerCase();
-    if (!value) return dishes.slice(0, 6);
+    if (!value) return dishes.slice(0, 4);
     return dishes.filter(
       (dish) =>
         dish.name.toLowerCase().includes(value) ||
@@ -42,7 +42,7 @@ export function SearchDialog() {
     <AnimatePresence>
       {searchOpen ? (
         <motion.div
-          className="fixed inset-0 z-50 grid place-items-start justify-center px-4 pt-24"
+          className="fixed inset-0 z-50 grid place-items-start justify-center px-3 pt-20 sm:px-4 sm:pt-24"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -57,7 +57,7 @@ export function SearchDialog() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="search-title"
-            className="relative w-full max-w-xl overflow-hidden rounded-[1.75rem] bg-white p-2 shadow-lift ring-1 ring-ink/8"
+            className="relative w-full max-w-[20.5rem] overflow-hidden rounded-2xl bg-white p-1.5 shadow-lift ring-1 ring-ink/8 sm:max-w-lg sm:rounded-[1.75rem] sm:p-2 md:max-w-xl"
             initial={reduce ? false : { y: 16, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={reduce ? { opacity: 0 } : { y: 12, opacity: 0 }}
@@ -66,27 +66,30 @@ export function SearchDialog() {
             <h2 id="search-title" className="sr-only">
               Search the menu
             </h2>
-            <div className="flex items-center gap-2 rounded-[1.25rem] bg-canvas px-4">
-              <Search className="size-5 text-muted" strokeWidth={1.5} />
+            <div className="flex items-center gap-1.5 rounded-xl bg-canvas px-2.5 sm:gap-2 sm:rounded-[1.25rem] sm:px-4">
+              <Search
+                className="size-4 shrink-0 text-muted sm:size-5"
+                strokeWidth={1.5}
+              />
               <input
                 ref={inputRef}
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search burgers, pasta, rice..."
-                className="h-12 w-full bg-transparent text-base text-ink outline-none placeholder:text-muted"
+                placeholder="Search dishes"
+                className="h-9 min-w-0 w-full bg-transparent text-sm text-ink outline-none placeholder:text-muted sm:h-12 sm:text-base"
               />
               <button
                 type="button"
                 onClick={closeSearch}
-                className="grid size-8 cursor-pointer place-items-center rounded-full hover:bg-white"
+                className="grid size-7 shrink-0 cursor-pointer place-items-center rounded-full hover:bg-white sm:size-8"
                 aria-label="Close search"
               >
-                <X className="size-4" strokeWidth={1.5} />
+                <X className="size-3.5 sm:size-4" strokeWidth={1.5} />
               </button>
             </div>
-            <ul className="mt-2 max-h-[50vh] overflow-y-auto p-2">
+            <ul className="mt-1.5 max-h-[42vh] overflow-y-auto p-1 sm:mt-2 sm:max-h-[50vh] sm:p-2">
               {results.length === 0 ? (
-                <li className="px-3 py-6 text-sm text-muted">
+                <li className="px-2 py-4 text-sm text-muted sm:px-3 sm:py-6">
                   Nothing matches “{query}”. Try burger, pasta, or rice.
                 </li>
               ) : (
@@ -95,9 +98,9 @@ export function SearchDialog() {
                     <a
                       href="#menu"
                       onClick={closeSearch}
-                      className="flex items-center gap-3 rounded-2xl p-2 hover:bg-canvas"
+                      className="flex items-center gap-2.5 rounded-xl p-1.5 hover:bg-canvas sm:gap-3 sm:rounded-2xl sm:p-2"
                     >
-                      <div className="relative size-12 overflow-hidden rounded-xl">
+                      <div className="relative size-9 shrink-0 overflow-hidden rounded-lg sm:size-12 sm:rounded-xl">
                         <Image
                           src={dish.image}
                           alt=""
@@ -107,14 +110,14 @@ export function SearchDialog() {
                         />
                       </div>
                       <span className="min-w-0 flex-1">
-                        <span className="block truncate font-medium">
+                        <span className="block truncate text-sm font-medium sm:text-base">
                           {dish.name}
                         </span>
-                        <span className="block truncate text-sm text-muted">
+                        <span className="mt-0.5 hidden truncate text-sm text-muted sm:block">
                           {dish.description}
                         </span>
                       </span>
-                      <span className="text-sm font-medium">
+                      <span className="shrink-0 text-xs font-medium sm:text-sm">
                         {formatNaira(dish.price)}
                       </span>
                     </a>

@@ -17,7 +17,7 @@ export function Testimonials() {
         <Reveal>
           <h2
             id="reviews-heading"
-            className="font-display text-3xl font-semibold tracking-tight md:text-4xl"
+            className="font-display text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl"
           >
             People keep coming back
           </h2>
@@ -28,8 +28,8 @@ export function Testimonials() {
 
         <div className="mt-10 grid gap-5 lg:grid-cols-2">
           <Reveal>
-            <blockquote className="flex h-full flex-col justify-between rounded-[2rem] bg-char p-8 text-white md:p-10">
-              <p className="font-display text-2xl leading-snug font-medium tracking-tight md:text-3xl">
+            <blockquote className="flex h-full flex-col justify-between rounded-[1.5rem] bg-char p-5 text-white sm:rounded-[2rem] sm:p-8 md:p-10">
+              <p className="font-display text-xl leading-snug font-medium tracking-tight sm:text-2xl md:text-3xl">
                 “{featured.quote}”
               </p>
               <footer className="mt-8 flex items-center gap-3">

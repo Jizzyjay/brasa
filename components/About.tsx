@@ -47,7 +47,7 @@ export function About() {
         <Reveal delay={0.08}>
           <h2
             id="about-heading"
-            className="font-display text-3xl font-semibold tracking-tight md:text-5xl md:leading-[1.1]"
+            className="font-display text-2xl font-semibold tracking-tight sm:text-3xl md:text-5xl md:leading-[1.1]"
           >
             Cooked like it’s for our own table
           </h2>

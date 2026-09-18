@@ -61,7 +61,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6 md:pt-4">
+      <header className="fixed inset-x-0 top-0 z-50 px-2 pt-2 sm:px-3 sm:pt-3 md:px-6 md:pt-4">
         <div
           className={cn(
             "glass-nav mx-auto flex w-full max-w-[1240px] items-center justify-between gap-2 rounded-[1.75rem] px-2 py-2 ring-1 transition-[background-color,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] sm:px-3 md:px-4",
@@ -78,7 +78,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                className="cursor-pointer rounded-full px-3.5 py-2 text-sm transition-colors duration-200"
+                  "cursor-pointer rounded-full px-3.5 py-2 text-sm transition-colors duration-200",
                   active === link.href
                     ? "bg-ink text-white"
                     : "text-ink/75 hover:bg-mist hover:text-ink",
@@ -178,7 +178,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={handleNavClick}
-                  className="font-display text-4xl font-semibold tracking-tight text-white"
+                  className="font-display text-[1.75rem] font-semibold tracking-tight text-white sm:text-4xl"
                   initial={reduce ? false : { opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ ...springSnappy, delay: 0.04 * index }}
@@ -187,13 +187,14 @@ export function Navbar() {
                 </motion.a>
               ))}
             </nav>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="#menu" onClick={handleNavClick} size="lg" icon>
+            <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Button href="#menu" onClick={handleNavClick} size="lg" icon className="w-full sm:w-auto">
                 Order Now
               </Button>
               <Button
                 variant="secondary"
                 size="lg"
+                className="w-full sm:w-auto"
                 onClick={() => {
                   closeMenu();
                   openSearch();

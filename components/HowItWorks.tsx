@@ -25,14 +25,14 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="scroll-mt-28 px-4 py-20 md:px-8 md:py-28"
+      className="scroll-mt-28 px-4 py-14 sm:py-20 md:px-8 md:py-28"
       aria-labelledby="how-heading"
     >
       <div className="mx-auto max-w-[1240px]">
         <Reveal>
           <h2
             id="how-heading"
-            className="font-display text-3xl font-semibold tracking-tight md:text-4xl"
+            className="font-display text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl"
           >
             From kitchen to doorstep
           </h2>
@@ -41,13 +41,13 @@ export function HowItWorks() {
           </p>
         </Reveal>
 
-        <ol className="mt-12 grid gap-5 md:grid-cols-3">
+        <ol className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-3">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
               <li key={step.title}>
                 <Reveal delay={index * 0.06}>
-                  <div className="h-full rounded-[1.75rem] bg-white p-6 ring-1 ring-ink/8">
+                  <div className="h-full rounded-[1.5rem] bg-white p-5 ring-1 ring-ink/8 sm:rounded-[1.75rem] sm:p-6">
                     <div className="flex items-center justify-between">
                       <span className="grid size-12 place-items-center rounded-2xl bg-mist text-olive">
                         <Icon className="size-5" strokeWidth={1.5} />

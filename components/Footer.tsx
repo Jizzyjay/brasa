@@ -81,7 +81,7 @@ export function Footer() {
             <label htmlFor="newsletter" className="sr-only">
               Email address
             </label>
-            <div className="flex rounded-full bg-white/8 p-1 ring-1 ring-white/12">
+            <div className="flex min-w-0 rounded-full bg-white/8 p-1 ring-1 ring-white/12">
               <input
                 id="newsletter"
                 type="email"
@@ -91,12 +91,12 @@ export function Footer() {
                   setStatus("idle");
                 }}
                 placeholder="you@email.com"
-                className="min-w-0 flex-1 bg-transparent px-4 text-sm text-white outline-none placeholder:text-white/40"
+                className="min-w-0 flex-1 bg-transparent px-3 text-sm text-white outline-none placeholder:text-white/40 sm:px-4"
                 autoComplete="email"
               />
               <button
                 type="submit"
-                className="cursor-pointer rounded-full bg-chili px-4 py-2 text-sm font-medium text-white transition-transform active:scale-95 hover:bg-chili-dark"
+                className="cursor-pointer shrink-0 rounded-full bg-chili px-3 py-2 text-sm font-medium text-white transition-transform active:scale-95 hover:bg-chili-dark sm:px-4"
               >
                 Join
               </button>

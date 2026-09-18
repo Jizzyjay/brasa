@@ -16,7 +16,7 @@ export function Logo({ className, onDark = false }: LogoProps) {
     >
       <span
         className={cn(
-          "grid size-9 place-items-center rounded-full",
+          "grid size-8 place-items-center rounded-full sm:size-9",
           onDark ? "bg-chili text-white" : "bg-chili text-white",
         )}
       >
@@ -24,7 +24,7 @@ export function Logo({ className, onDark = false }: LogoProps) {
       </span>
       <span
         className={cn(
-          "font-display text-lg font-semibold tracking-tight sm:text-xl",
+          "font-display text-base font-semibold tracking-tight sm:text-lg md:text-xl",
           onDark ? "text-white" : "text-ink",
         )}
       >

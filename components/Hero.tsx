@@ -11,23 +11,23 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[min(100dvh,52rem)] px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24"
+      className="relative min-h-0 px-4 pt-24 pb-12 sm:pt-28 sm:pb-16 md:px-8 md:pt-36 md:pb-24"
     >
       <div className="mx-auto grid max-w-[1240px] items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-8">
         <div className="max-w-xl">
           <p className="hero-rise text-sm font-medium text-olive">
             Lagos kitchen, city-wide delivery
           </p>
-          <h1 className="hero-rise hero-rise-1 mt-4 font-display text-[clamp(2.15rem,8vw,5.5rem)] leading-[1.05] font-semibold tracking-[-0.03em] text-ink sm:tracking-[-0.04em]">
+          <h1 className="hero-rise hero-rise-1 mt-3 font-display text-[clamp(2rem,9vw,5.5rem)] leading-[1.08] font-semibold tracking-[-0.03em] text-ink sm:mt-4 sm:tracking-[-0.04em]">
             Good Food.
             <br />
             Delivered Fresh.
           </h1>
-          <p className="hero-rise hero-rise-2 mt-5 max-w-[38ch] text-lg leading-relaxed text-muted">
+          <p className="hero-rise hero-rise-2 mt-4 max-w-[38ch] text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">
             Burgers off the grill, pasta finished to order, and rice with a proper
             kick — packed and sent while it’s still steaming.
           </p>
-          <div className="hero-rise hero-rise-3 mt-8 flex flex-wrap items-center gap-3">
+          <div className="hero-rise hero-rise-3 mt-6 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3">
             <Button href="#menu" size="lg" icon>
               Order Now
             </Button>
@@ -44,7 +44,7 @@ export function Hero() {
           </div>
 
           <div className="relative mx-auto aspect-square max-w-[460px]">
-            <div className="absolute inset-[8%] overflow-hidden rounded-full bg-mist shadow-lift ring-8 ring-white">
+            <div className="absolute inset-[8%] overflow-hidden rounded-full bg-mist shadow-lift ring-4 ring-white sm:ring-8">
               <Image
                 src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=80"
                 alt="Brasa signature burger with melted cheese and toasted bun"
